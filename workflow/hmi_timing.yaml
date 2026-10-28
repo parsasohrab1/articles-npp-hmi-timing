@@ -1,0 +1,14 @@
+name: hmi-timing
+description: Time-to-certified-diagnosis evaluation for nuclear-plant accident identification
+steps:
+  - id: fetch
+    run: python -c "import sys; sys.path.insert(0,'src'); from hmitime import data; data.download('data/runs')"
+    note: public NPPAD simulator runs; not committed
+  - id: test
+    run: python -m pytest -q tests
+  - id: experiment
+    run: python scripts/run_experiment.py
+    produces: outputs/results.json
+  - id: review
+    manual: true
+    note: inspect singleton share, coverage and open-set NO_MATCH rate before quoting any number
