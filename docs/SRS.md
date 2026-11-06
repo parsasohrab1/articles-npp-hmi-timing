@@ -17,6 +17,7 @@ Offline research tool. It is **not** a safety-classified system and is not conne
 | FR-6 | Report the first window at which a correct singleton is shown (time-to-certified-diagnosis). |
 | FR-7 | Open-set test: hold one accident type out of training and calibration and report how often the display answers NO_MATCH instead of a wrong SINGLE. |
 | FR-8 | Splits are by run (no run appears in two splits); repeated over random seeds. |
+| FR-9 | On the same leave-one-type-out splits, score known and held-out runs with a class-conditional Mahalanobis distance and with the energy of a multinomial logistic model. Calibrate each score on known calibration runs and report detection, false reject, and AUROC. |
 
 ## 4. Non-functional requirements
 - NFR-1 Reproducible: one command regenerates `outputs/results.json`; seeds fixed.
@@ -27,3 +28,4 @@ Offline research tool. It is **not** a safety-classified system and is not conne
 - Simulator data (PCTRAN-style PWR), not plant data; 12 of the 18 published accident types are available as CSV.
 - Single reactor model; no sensor faults, no operator actions after insertion.
 - Split-conformal coverage is marginal, not per-type.
+- On the measured NPPAD run, neither the empty conformal set nor a Mahalanobis or logistic-energy score reliably flags a held-out accident type. See `outputs/results.json`.

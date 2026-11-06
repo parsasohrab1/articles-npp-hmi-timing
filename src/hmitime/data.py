@@ -1,6 +1,11 @@
 """Loader for the public NPPAD simulated PWR accident data set (Tsinghua / Micro-Simulation Technology, Sci. Data 2022).
 Each run is a CSV with 97 plant variables sampled every 10 s; the accident is inserted at t = 20 s."""
-import csv, glob, os, subprocess, urllib.request
+import csv
+import glob
+import os
+import subprocess
+import urllib.request
+
 import numpy as np
 
 RAW = "https://raw.githubusercontent.com/thu-inet/NuclearPowerPlantAccidentData/master/Operation_csv_data/"
@@ -27,7 +32,8 @@ def load(dest="data/runs", max_rows=70):
         t = os.path.basename(p).split("_")[0]
         if t not in TYPES:
             continue
-        raw = list(csv.reader(open(p)))
+        with open(p, newline="") as handle:
+            raw = list(csv.reader(handle))
         if len(raw[0]) != N_VARS or len(raw) < max_rows + 1:
             continue  # files with extra columns or too short to cover the longest window are skipped
         rows = raw[1:max_rows + 1]

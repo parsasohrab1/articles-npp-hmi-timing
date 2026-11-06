@@ -11,4 +11,4 @@ steps:
     produces: outputs/results.json
   - id: review
     manual: true
-    note: inspect singleton share, coverage and open-set NO_MATCH rate before quoting any number
+    note: inspect singleton share, coverage, open-set NO_MATCH rate, and Mahalanobis/energy detection before quoting any number
