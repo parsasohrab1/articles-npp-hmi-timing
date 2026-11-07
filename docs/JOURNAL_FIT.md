@@ -28,4 +28,4 @@ Correct singleton by 120 s: 0.958. None by 600 s: 0.035. At 300 s the held-out c
 
 ## Decision
 
-Do not upload. The abstract deadline is still open on the check date. Submission stays closed because a patent attorney has not confirmed that the text discloses no claimed method. The note in [../article/abstract.md](../article/abstract.md) is not a submission. The internal filing card is [REGISTRATION.md](REGISTRATION.md).
+Upload only after the venue-fit gate in the Articles tab is complete for this call. The abstract deadline is still open on the check date. The note in [../article/abstract.md](../article/abstract.md) is not a submission. The internal filing card is [REGISTRATION.md](REGISTRATION.md).

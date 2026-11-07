@@ -33,7 +33,7 @@ def test_registration_card_matches_the_results_file():
     assert abstract == abstract_markdown(results)
     assert "ارسال نشده" in card
     assert "hmitime" in card
-    assert "Do not upload" in note
+    assert "venue-fit gate" in note
     assert "This note is not submitted." in abstract
 
 

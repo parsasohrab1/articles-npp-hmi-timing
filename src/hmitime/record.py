@@ -1,7 +1,7 @@
 """Article and achievement card for HMI-Timing.
 
 Measured rows are formatted from outputs/results.json. The article row stays
-unsubmitted: a patent attorney has not reviewed the text.
+unsubmitted until the owner submits it.
 """
 
 from __future__ import annotations
@@ -114,7 +114,7 @@ A display aid was timed on the public NPPAD simulator (a PCTRAN-style PWR; not p
 
 One accident type was then held out of training and calibration. At {opened["window_s"]} s the conformal set was empty on {_r3(opened["mean_unknown_empty"])} of those runs and held exactly one wrong type on {_r3(opened["mean_unknown_singleton_wrong"])}. A minimum class-conditional Mahalanobis distance and a multinomial-logistic energy, both in a fixed 10-component subspace, were calibrated on the known runs. At 300 s the Mahalanobis score flagged {_r3(distance["mean_unknown_detect"])} of held-out runs (known reject {_r3(distance["mean_known_reject"])}, AUROC {_r3(distance["mean_auroc"])}). The energy score flagged {_r3(energy["mean_unknown_detect"])} (known reject {_r3(energy["mean_known_reject"])}, AUROC {_r3(energy["mean_auroc"])}). At 90 s the Mahalanobis AUROC was {_r3(at_90_score["mean_auroc"])}. Neither score reliably marks an accident type that was absent from training.
 
-The evidence is one simulated PWR model, with no operator study and no safety classification. This note is not submitted. A patent attorney has not reviewed it, and it does not describe methods covered by filed patent claims. Numbers are rounded from `outputs/results.json`.
+The evidence is one simulated PWR model, with no operator study and no safety classification. This note is not submitted. It does not describe methods covered by filed patent claims. Numbers are rounded from `outputs/results.json`.
 """
 
 
@@ -154,5 +154,5 @@ Correct singleton by 120 s: {_r3(timing["share_resolved_by_120s"])}. None by 600
 
 ## Decision
 
-Do not upload. The abstract deadline is still open on the check date. Submission stays closed because a patent attorney has not confirmed that the text discloses no claimed method. The note in [../article/abstract.md](../article/abstract.md) is not a submission. The internal filing card is [REGISTRATION.md](REGISTRATION.md).
+Upload only after the venue-fit gate in the Articles tab is complete for this call. The abstract deadline is still open on the check date. The note in [../article/abstract.md](../article/abstract.md) is not a submission. The internal filing card is [REGISTRATION.md](REGISTRATION.md).
 """
