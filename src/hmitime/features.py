@@ -1,6 +1,7 @@
 """Features at a window ending `seconds_after` seconds after accident insertion: change from t=0, last-30-s slope, running max change."""
 import numpy as np
-from .data import INSERT_S, DT
+
+from .data import DT, INSERT_S
 
 
 def window_features(X, seconds_after, scale=None):
