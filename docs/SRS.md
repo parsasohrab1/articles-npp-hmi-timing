@@ -18,6 +18,8 @@ Offline research tool. It is **not** a safety-classified system and is not conne
 | FR-7 | Open-set test: hold one accident type out of training and calibration and report how often the display answers NO_MATCH instead of a wrong SINGLE. |
 | FR-8 | Splits are by run (no run appears in two splits); repeated over random seeds. |
 | FR-9 | On the same leave-one-type-out splits, score known and held-out runs with a class-conditional Mahalanobis distance and with the energy of a multinomial logistic model. Calibrate each score on known calibration runs and report detection, false reject, and AUROC. |
+| FR-10 | Write the filing card, the journal-fit note, and the abstract from `outputs/results.json`. The card status stays unsubmitted until a patent attorney has reviewed the text. |
+| FR-10 | Write the filing card, the journal-fit note, and the abstract from `outputs/results.json`. The card status stays unsubmitted until a patent attorney has reviewed the text. |
 
 ## 4. Non-functional requirements
 - NFR-1 Reproducible: one command regenerates `outputs/results.json`; seeds fixed.

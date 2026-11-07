@@ -9,6 +9,14 @@ steps:
   - id: experiment
     run: python scripts/run_experiment.py
     produces: outputs/results.json
+  - id: record
+    run: python scripts/write_registration.py
+    produces: docs/REGISTRATION.md
+    note: filing card, journal-fit note, and abstract; article status stays unsubmitted
+  - id: record
+    run: python scripts/write_registration.py
+    produces: docs/REGISTRATION.md
+    note: filing card, journal-fit note, and abstract; article status stays unsubmitted
   - id: review
     manual: true
     note: inspect singleton share, coverage, open-set NO_MATCH rate, and Mahalanobis/energy detection before quoting any number

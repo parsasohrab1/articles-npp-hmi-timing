@@ -9,5 +9,5 @@ jobs:
         with:
           python-version: "3.11"
       - run: pip install -r requirements.txt ruff
-      - run: ruff check src tests scripts/run_experiment.py
+      - run: ruff check src tests scripts/run_experiment.py scripts/write_registration.py scripts/write_registration.py
       - run: pytest -q

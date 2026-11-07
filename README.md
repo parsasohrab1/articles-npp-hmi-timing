@@ -8,11 +8,17 @@ Method: run-level splits of the public NPPAD simulator data, random forest per t
 
 This repository reports that measurement only. Methods covered by filed patent claims are not described here.
 
+The filing card for article registration and achievements is [docs/REGISTRATION.md](docs/REGISTRATION.md) (product id `hmitime`). The NPIC&HMIT and ISOFIC 2027 gate is [docs/JOURNAL_FIT.md](docs/JOURNAL_FIT.md). The note is [article/abstract.md](article/abstract.md). All three are rewritten from `outputs/results.json` by `python scripts/write_registration.py`. The article status on the card is unsubmitted.
+
+The filing card for article registration and achievements is [docs/REGISTRATION.md](docs/REGISTRATION.md) (product id `hmitime`). The NPIC&HMIT and ISOFIC 2027 gate is [docs/JOURNAL_FIT.md](docs/JOURNAL_FIT.md). The note is [article/abstract.md](article/abstract.md). All three are rewritten from `outputs/results.json` by `python scripts/write_registration.py`. The article status on the card is unsubmitted.
+
 ## Run
 ```
 pip install -r requirements.txt
 python -m pytest -q tests
 python scripts/run_experiment.py     # downloads data/runs on first use (needs the gh CLI), writes outputs/results.json
+python scripts/write_registration.py  # rewrites the filing card, journal-fit note, and abstract from that file
+python scripts/write_registration.py  # rewrites the filing card, journal-fit note, and abstract from that file
 ```
 
 ## Measured results (alpha = 0.05, 10 random run-level splits, 316 runs, 12 types)
